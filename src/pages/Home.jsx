@@ -5,7 +5,7 @@ import { Typewriter } from 'react-simple-typewriter'
 const Home = () => {
   return (
    <>
-     {/* Hero Section */}
+   
      <section
        className="hero text-white w-full h-150 py-10 px-4 text-center"
        style={{
