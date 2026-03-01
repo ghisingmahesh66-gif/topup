@@ -14,7 +14,7 @@ const Home = () => {
          backgroundPosition: 'center',
        }}
      >
-       <div className="max-w-[1200px] h-[500px] mx-auto bg-black/60 justify-center items-center flex flex-col rounded-lg shadow-lg">
+       <div className="max-w-[1200px] h-[500px] mx-auto bg-black/60 justify-center items-center flex flex-col rounded-4xl shadow-lg">
          <h1 className=" text-white opacity-100 text-4xl md:text-6xl font-bold mb-4">
            Welcome to Online Sewa
          </h1>
