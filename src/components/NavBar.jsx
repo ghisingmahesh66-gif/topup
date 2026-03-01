@@ -6,7 +6,7 @@ const NavBar = () => {
     isActive ? "text-white font-bold underline" : "text-white hover:font-bold transition"
 
   return (
-    <nav className="bg-gradient-to-r from-purple-500 to-purple-700 sticky top-0 z-50 shadow-md">
+    <nav className="bg-gradient-to-r from-pink-500 to-purple-900 sticky top-0 z-50 shadow-md">
       <div className="flex justify-between items-center px-5 py-3">
         <div className="text-white font-bold text-2xl">
             Oniline Sewa
