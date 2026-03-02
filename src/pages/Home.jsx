@@ -41,6 +41,27 @@ const Home = () => {
          </a>
        </div>
      </section>
+
+     
+     <section className="py-16 bg-gray-100">
+       <div className="max-w-6xl mx-auto px-4">
+         <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+           <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+             <h3 className="text-xl font-semibold mb-4">Game Top‑ups</h3>
+             <p className="text-gray-600">Purchase in‑game currency for PUBG, Freefire, MLBB and more instantly.</p>
+           </div>
+           <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+             <h3 className="text-xl font-semibold mb-4">Bill Payments</h3>
+             <p className="text-gray-600">Pay your utility bills quickly – electricity, water, internet and others.</p>
+           </div>
+           <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+             <h3 className="text-xl font-semibold mb-4">Mobile Recharge</h3>
+             <p className="text-gray-600">Top up prepaid mobile plans across all major carriers.</p>
+           </div>
+         </div>
+       </div>
+     </section>
    </>
   )
 }
