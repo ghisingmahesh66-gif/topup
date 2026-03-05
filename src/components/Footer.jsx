@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-blue-900 text-gray-300">
       <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
          
           <div>
             <h3 className="text-white text-xl font-bold mb-4">Online Sewa</h3>
@@ -28,14 +28,10 @@ const Footer = () => {
               </li>
               <li>
                 <NavLink to="/service" className="hover:text-white transition">
-                  Service
+                  Products
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/portfolio" className="hover:text-white transition">
-                  Portfolio
-                </NavLink>
-              </li>
+              
               <li>
                 <NavLink to="/contact" className="hover:text-white transition">
                   Contact
