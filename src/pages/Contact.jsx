@@ -16,6 +16,8 @@ const Contact = () => {
           <label htmlFor="">Message</label>
           <textarea name="" id="" className='border-1 h-[100px] '></textarea>
           <input type="Submit" value="Contact Now" className=' bg-black text-white border-1 p-1 rounded-[8px] w-full mt-5'/>
+          <textarea name="" id="" className='border-1 h-[100px] '></textarea>
+          <input type="Submit" value="Contact Now" className=' bg-black text-white border-1 p-1 rounded-[8px] w-full mt-5'/>
         </form>
             </div>
          </div>
