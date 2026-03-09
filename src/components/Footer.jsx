@@ -1,4 +1,36 @@
 import React from 'react'
+// const Footer = () => {
+//   return (
+//     <footer className="bg-gray-900 text-white py-8">
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+//         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+//           {/* Copyright */}
+//           <p className="text-gray-400 text-sm">
+//             © 2026 TopUpHub. All Rights Reserved.
+//           </p>
+
+//           {/* Links */}
+//           <div className="flex items-center gap-4 text-sm">
+//             <a href="#" className="text-gray-400 hover:text-white transition">
+//               Privacy Policy
+//             </a>
+//             <span className="text-gray-600">|</span>
+//             <a href="#" className="text-gray-400 hover:text-white transition">
+//               Terms of Service
+//             </a>
+//             <span className="text-gray-600">|</span>
+//             <a href="#" className="text-gray-400 hover:text-white transition">
+//               Support
+//             </a>
+//           </div>
+//         </div>
+//       </div>
+//     </footer>
+//   );
+// };
+
+// export default Footer;
+
 import { NavLink } from 'react-router-dom'
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
@@ -93,7 +125,7 @@ const Footer = () => {
     
         <div className="flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm">
-            &copy; {currentYear} Online Sewa. All rights reserved.
+            &copy; 2026 Online Sewa. All rights reserved.
           </p>
           <p className="text-sm">
             Made with <span className="text-red-500">❤</span> by Mahesh Ghising.
