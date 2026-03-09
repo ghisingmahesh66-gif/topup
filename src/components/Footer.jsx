@@ -38,82 +38,61 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-blue-900 text-gray-300">
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-         
-          <div>
-            <h3 className="text-white text-xl font-bold mb-4">Online Sewa</h3>
-            <p className="text-sm">
-              Fast, secure, and reliable top-up services for your favorite games.
+    <footer className="relative z-50 bg-gradient-to-r from-purple-900 via-red-700 to-pink-700 text-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* grid on mobile, tab, desktop */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-8">
+         {/* brand info */}
+          <div className="space-y-4">
+            <h3 className="text-white text-2xl font-bold italic">Online Sewa</h3>
+            <p className="text-sm leading-relaxed opacity-90">
+              Fast, secure, and reliable top-up services for your favorite games. 
+              Join thousands of gamers who trust us.
             </p>
           </div>
 
-         
+          {/* Quick Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-white font-bold text-lg mb-4 border-b-2 border-white/20 pb-1 inline-block">
+              Quick Links
+            </h4>
             <ul className="space-y-2">
-              <li>
-                <NavLink to="/" className="hover:text-white transition">
-                  Home
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to="/service" className="hover:text-white transition">
-                  Products
-                </NavLink>
-              </li>
-              
-              <li>
-                <NavLink to="/contact" className="hover:text-white transition">
-                  Contact
-                </NavLink>
-              </li>
+              <li><NavLink to="/" className="hover:translate-x-1 hover:text-white transition-all inline-block">Home</NavLink></li>
+              <li><NavLink to="/games" className="hover:translate-x-1 hover:text-white transition-all inline-block">Games</NavLink></li>
+              <li><NavLink to="/contact" className="hover:translate-x-1 hover:text-white transition-all inline-block">Contact</NavLink></li>
             </ul>
           </div>
 
-        
+          {/* Support Section */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Support</h4>
+            <h4 className="text-white font-bold text-lg mb-4 border-b-2 border-white/20 pb-1 inline-block">
+              Support
+            </h4>
             <ul className="space-y-2">
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  FAQ
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  Help Center
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-white transition">
-                  Terms of Service
-                </a>
-              </li>
+              <li><a href="#" className="hover:translate-x-1 hover:text-white transition-all inline-block">FAQ</a></li>
+              <li><a href="#" className="hover:translate-x-1 hover:text-white transition-all inline-block">Privacy Policy</a></li>
+              <li><a href="#" className="hover:translate-x-1 hover:text-white transition-all inline-block">Terms of Service</a></li>
             </ul>
           </div>
 
        
+         {/* Social Section */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Follow Us</h4>
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-white transition">
-                <FaFacebook size={24} />
+            <h4 className="text-white font-bold text-lg mb-4 border-b-2 border-white/20 pb-1 inline-block">
+              Follow Us
+            </h4>
+            <div className="flex gap-5">
+              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300">
+                <FaFacebook size={20} />
               </a>
-              <a href="#" className="hover:text-white transition">
-                <FaTwitter size={24} />
+              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300">
+                <FaTwitter size={20} />
               </a>
-              <a href="#" className="hover:text-white transition">
-                <FaInstagram size={24} />
+              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300">
+                <FaInstagram size={20} />
               </a>
-              <a href="#" className="hover:text-white transition">
-                <FaLinkedin size={24} />
+              <a href="#" className="bg-white/10 p-2 rounded-full hover:bg-white hover:text-pink-600 transition-all duration-300">
+                <FaLinkedin size={20} />
               </a>
             </div>
           </div>
@@ -123,12 +102,13 @@ const Footer = () => {
         <hr className="border-gray-700 mb-8" />
 
     
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm">
-            &copy; 2026 Online Sewa. All rights reserved.
+        {/* Bottom Bar: Stacked on mobile, side-by-side on desktop */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+          <p className="text-sm opacity-80">
+            &copy; {currentYear} <span className="font-bold">Online Sewa</span>. All rights reserved.
           </p>
-          <p className="text-sm">
-            Made with <span className="text-red-500">❤</span> by Mahesh Ghising.
+          <p className="text-sm bg-white/10 px-4 py-1 rounded-full border border-white/10">
+            Made with <span className="text-red-400">❤</span> by <span className="font-semibold text-white">Mahesh Ghising</span>
           </p>
         </div>
       </div>

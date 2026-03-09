@@ -1,5 +1,6 @@
 import React from 'react'
 // import heroImg from '../Images/hero.jpg'
+import { Link } from 'react-router-dom'
 import { Zap, Gamepad2, Shield, Clock, Globe } from 'lucide-react';
 
 const Home = () => {
@@ -36,16 +37,20 @@ const Home = () => {
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
             {/* Primary Button */}
+            <Link to="/games">
             <button className="flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold px-8 py-4 rounded-full text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
               <Zap className="w-5 h-5" />
               Top Up Now
             </button>
+            </Link>
 
             {/* Secondary Button */}
+            <Link to="/games">
             <button className="flex items-center gap-2 border-2 border-white text-white font-semibold px-8 py-4 rounded-full text-lg hover:bg-white hover:text-purple-900 transition-all duration-300">
               <Gamepad2 className="w-5 h-5" />
               View Games
             </button>
+            </Link>
           </div>
 {/* Trust Indicators - Below Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">

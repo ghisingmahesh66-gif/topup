@@ -1,6 +1,11 @@
 import React from 'react'
 import { useState } from 'react';
 import { Zap, Search, Diamond, CreditCard, Check, X, Wallet, Building2, Smartphone } from 'lucide-react';
+import mlImg from '../Images/ml.jpg';
+import ffImg from '../Images/ff.jpg';
+import pubgImg from '../Images/pubg.jpg'; 
+import cocImg from '../Images/coc.jpg';
+
 
 const Games = () => {
   const [activeGame, setActiveGame] = useState(null);
@@ -10,10 +15,37 @@ const Games = () => {
   const [paymentMethod, setPaymentMethod] = useState(null);
 
   const games = [
-    { id: 'ml', name: 'Mobile Legends', currency: 'Diamonds', color: 'from-purple-600 to-blue-600', initial: 'ML', desc: 'Recharge diamonds instantly' },
-    { id: 'ff', name: 'Free Fire', currency: 'Diamonds', color: 'from-orange-500 to-red-600', initial: 'FF', desc: 'Get diamonds fast & easy' },
-    { id: 'pubg', name: 'PUBG Mobile', currency: 'UC', color: 'from-yellow-500 to-amber-600', initial: 'PUBG', desc: 'Buy UC securely' },
-    { id: 'val', name: 'Valorant', currency: 'VP', color: 'from-red-600 to-pink-600', initial: 'VAL', desc: 'Purchase VP points' },
+    { id: 'ml', 
+      name: 'Mobile Legends', 
+      currency: 'Dias', 
+      color: 'from-purple-600 to-blue-600', 
+      // initial: 'ML', 
+      desc: 'Recharge diamonds instantly',
+      imageUrl: mlImg },
+
+    { id: 'ff', 
+      name: 'Free Fire', 
+      currency: 'Diamonds', 
+      color: 'from-orange-500 to-red-600', 
+      // initial: 'FF', 
+      desc: 'Get diamonds fast & easy',
+      imageUrl: ffImg },
+
+    { id: 'pubg', 
+      name: 'PUBG Mobile', 
+      currency: 'UC', 
+      color: 'from-yellow-500 to-amber-600', 
+      // initial: 'PUBG', 
+      desc: 'Buy UC securely',
+      imageUrl: pubgImg },
+
+    { id: 'coc', 
+      name: 'Clash of Clans', 
+      currency: 'Gems', 
+      color: 'from-red-600 to-pink-600', 
+      // initial: 'VAL', 
+      desc: 'Purchase VP points',
+      imageUrl: cocImg },
   ];
 
   const amounts = [
@@ -39,7 +71,7 @@ const Games = () => {
   return (
     <div className="min-h-screen bg-gray-50 pt-16 relative">
       {/* Background */}
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-red-900 to-pink-900 opacity-30" />
         <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15" style={{ backgroundImage: `url('https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1920&q=80')` }} />
       </div>
@@ -55,7 +87,15 @@ const Games = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {games.map((g) => (
             <div key={g.id} className="bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl group">
-              <div className={`h-48 bg-gradient-to-br ${g.color} flex items-center justify-center`}>
+              <div className={`h-85 bg-gradient-to-br ${g.color} flex items-center justify-center overflow-hidden`}>
+
+                {g.imageUrl ? (
+                  <img src={g.imageUrl} 
+                  alt={g.name} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-100 " />
+                ) : (
+                  <span className="text-white text-6xl font-bold">{g.initial}</span>
+                )}
                 <span className="text-white text-6xl font-bold">{g.initial}</span>
               </div>
               <div className="p-6">
@@ -72,7 +112,7 @@ const Games = () => {
 
       {/* Top-Up Modal */}
       {activeGame && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/60" onClick={closeTopUp} />
           <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg relative z-10 max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
@@ -83,7 +123,7 @@ const Games = () => {
 
             {/* Steps */}
             <div className="p-6">
-              <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="flex items-center justify-center gap-2 sm:gap-4 mb-8">
                 {[{ i: Search, l: 'ID' }, { i: Diamond, l: 'Amount' }, { i: CreditCard, l: 'Pay' }].map((s, idx) => (
                   <div key={idx} className="flex items-center">
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center ${step > idx + 1 ? 'bg-green-500 text-white' : step === idx + 1 ? 'bg-purple-600 text-white' : 'bg-gray-200 text-gray-400'}`}>
